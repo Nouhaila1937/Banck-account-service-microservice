@@ -1,26 +1,17 @@
-package org.example.bankaccountservice.entities;
+package org.example.bankaccountservice.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.example.bankaccountservice.enums.AccountType;
 
-import java.util.Date;
-
-@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BankAccount {
-    @Id
-    private String id;
-    private Date createdAt;
+public class BankAccountRequestDTO {
     private Double balance;
     private String currency;
-    @Enumerated(EnumType.STRING)
     private AccountType type;
-
 }
